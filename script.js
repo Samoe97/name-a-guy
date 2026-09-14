@@ -122,6 +122,7 @@ let usedPromptIndexes = { easy: [], medium: [], hard: [] };
 let promptRound = 0;
 let wrongGuesses = 0;
 let isGameOver = false;
+let isSelecting = false;
 
 function getCurrentDifficultyTier() {
   return Math.min(Math.floor(promptRound / 4), difficultyLevels.length - 1);
@@ -167,7 +168,7 @@ const allAutocompleteNames = [
 ];
 
 function renderSuggestions() {
-  if (isGameOver) return;
+  if (isGameOver || isSelecting) return;
 
   const inputValue = normalizeAnswer(answerInputEl.value);
   if (!inputValue) {
@@ -197,9 +198,14 @@ function renderSuggestions() {
 }
 
 function selectSuggestion(value) {
+  if (!value) return;
+  isSelecting = true;
   answerInputEl.value = value;
   hideSuggestions();
   answerInputEl.focus();
+  setTimeout(() => {
+    isSelecting = false;
+  }, 100);
 }
 
 function updateLivesDisplay() {
@@ -363,6 +369,48 @@ answerInputEl.addEventListener("keydown", (event) => {
   }
 });
 
+let touchStartY = 0;
+let touchStartX = 0;
+let touchMoved = false;
+
+suggestionListEl.addEventListener(
+  "touchstart",
+  (event) => {
+    const touch = event.touches[0];
+    touchStartY = touch.clientY;
+    touchStartX = touch.clientX;
+    touchMoved = false;
+  },
+  { passive: true }
+);
+
+suggestionListEl.addEventListener(
+  "touchmove",
+  (event) => {
+    const touch = event.touches[0];
+    if (
+      Math.abs(touch.clientY - touchStartY) > 10 ||
+      Math.abs(touch.clientX - touchStartX) > 10
+    ) {
+      touchMoved = true;
+    }
+  },
+  { passive: true }
+);
+
+suggestionListEl.addEventListener("touchend", (event) => {
+  if (touchMoved) return;
+  const item = event.target.closest(".suggestion-item");
+  if (!item) return;
+  event.preventDefault();
+  selectSuggestion(item.dataset.value);
+});
+
+suggestionListEl.addEventListener("mousedown", (event) => {
+  // Prevent answerInputEl from blurring and triggering soft keyboard layout jumps
+  event.preventDefault();
+});
+
 suggestionListEl.addEventListener("click", (event) => {
   const item = event.target.closest(".suggestion-item");
   if (!item) return;
@@ -397,7 +445,7 @@ suggestionListEl.addEventListener("keydown", (event) => {
   }
 });
 
-document.addEventListener("click", (event) => {
+document.addEventListener("pointerdown", (event) => {
   if (
     !answerInputEl.contains(event.target) &&
     !suggestionListEl.contains(event.target)

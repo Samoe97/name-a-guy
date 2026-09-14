@@ -269,6 +269,7 @@ h1 {
   border: 1px solid rgba(168, 224, 179, 0.2);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   box-shadow: 0 16px 30px rgba(3, 8, 8, 0.35);
   max-height: 220px;
 }
@@ -288,6 +289,9 @@ h1 {
   cursor: pointer;
   border-bottom: 1px solid rgba(168, 224, 179, 0.12);
   touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .suggestion-item:last-child {
