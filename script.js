@@ -347,6 +347,7 @@ newGameBtn.addEventListener("click", () => {
 });
 
 answerInputEl.addEventListener("input", renderSuggestions);
+answerInputEl.addEventListener("focus", renderSuggestions);
 
 answerInputEl.addEventListener("keydown", (event) => {
   if (event.key === "ArrowDown") {
@@ -360,20 +361,12 @@ answerInputEl.addEventListener("keydown", (event) => {
     focusSuggestion(-1);
     return;
   }
+});
 
-  if (suggestionListEl.classList.contains("visible")) {
-    if (event.key === "ArrowDown") {
-      event.preventDefault();
-      focusSuggestion(1);
-      return;
-    }
-
-    if (event.key === "ArrowUp") {
-      event.preventDefault();
-      focusSuggestion(-1);
-      return;
-    }
-  }
+suggestionListEl.addEventListener("click", (event) => {
+  const item = event.target.closest(".suggestion-item");
+  if (!item) return;
+  selectSuggestion(item.dataset.value);
 });
 
 suggestionListEl.addEventListener("keydown", (event) => {
@@ -401,6 +394,15 @@ suggestionListEl.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     hideSuggestions();
     answerInputEl.focus();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    !answerInputEl.contains(event.target) &&
+    !suggestionListEl.contains(event.target)
+  ) {
+    hideSuggestions();
   }
 });
 
