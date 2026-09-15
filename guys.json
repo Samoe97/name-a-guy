@@ -16025,5 +16025,23 @@
     "hint2": "The 32nd U.S. President who guided the nation through the Great Depression and World War II while managing his physical disability from his wheelchair.",
     "notorietyScore": 70,
     "ethnicity": "White / American"
+  },
+  {
+    "name": "Leonardo DiCaprio",
+    "birthYear": 1974,
+    "age": 51,
+    "isDeceased": false,
+    "categories": [
+      "Actor",
+      "Producer",
+      "Oscar Winner",
+      "Environmentalist",
+      "American",
+      "Film Star"
+    ],
+    "hint1": "A famous Hollywood leading man and environmental activist who transitioned from teen heartthrob status to working with premier auteurs.",
+    "hint2": "The Oscar-winning actor who starred in *Titanic*, *Inception*, *The Wolf of Wall Street*, and *The Revenant*.",
+    "notorietyScore": 98,
+    "ethnicity": "White / American-Italian-German"
   }
 ]
