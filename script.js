@@ -8,10 +8,10 @@ function normalizeAnswer(value) {
     .trim();
 }
 
-const scoreEl = document.getElementById("score");
-const streakEl = document.getElementById("streak");
 const livesLeftEl = document.getElementById("lives-left");
 const promptTextEl = document.getElementById("prompt-text");
+const promptLabelEl = document.getElementById("prompt-label");
+const promptCardEl = document.querySelector(".prompt-card");
 const answerInputEl = document.getElementById("answer-input");
 const feedbackEl = document.getElementById("feedback");
 const answerForm = document.getElementById("answer-form");
@@ -25,6 +25,7 @@ const hint2El = document.getElementById("hint-2");
 const resultEl = document.getElementById("result");
 const hintListEl = document.getElementById("hint-list");
 const previousGuessesEl = document.getElementById("previous-guesses");
+const difficultyOptionsEl = document.getElementById("difficulty-options");
 
 const maxGuesses = 6;
 const hint1Guess = 2;
@@ -33,13 +34,12 @@ const hint2Guess = 4;
 let guys = [];
 let currentGuy = null;
 let guesses = 0;
-let score = 0;
-let streak = 0;
 let isRoundOver = false;
 let isSelecting = false;
 let revealedTags = [];
 let previousGuesses = [];
-let usedGuyIds = new Set();
+let usedGuyNames = new Set();
+let difficulty = "easy";
 
 function getTags(guy) {
   return [...new Set(guy.categories || [])].filter(Boolean);
@@ -59,14 +59,12 @@ function renderSharedTags() {
   sharedTagsEl.innerHTML = revealedTags.length
     ? revealedTags.map((tag) => `<span class="tag">${tag}</span>`).join("")
     : '<span class="empty-tags">No shared tags yet</span>';
-  resultEl.classList.add("visible");
 }
 
 function renderPreviousGuesses() {
   previousGuessesEl.innerHTML = previousGuesses.length
     ? previousGuesses.map(({ name, isCorrect }) => `<li><span>${name}</span><span class="${isCorrect ? "correct-label" : "incorrect-label"}">${isCorrect ? "Correct" : "Incorrect"}</span></li>`).join("")
     : "";
-  promptTextEl.textContent = previousGuesses.length ? "Previous guesses" : "Name a Guy";
   previousGuessesEl.classList.toggle("visible", previousGuesses.length > 0);
 }
 
@@ -82,16 +80,40 @@ function showHint2() {
 
 function renderProgressiveHints() {
   const hints = [];
-  if (guesses >= 1 && currentGuy.birthYear) hints.push(`Born in: ${currentGuy.birthYear}`);
-  if (guesses >= 2 && currentGuy.categories?.[0]) hints.push(`Category clue: ${currentGuy.categories[0]}`);
-  if (guesses >= 3 && currentGuy.categories?.[1]) hints.push(`Another category clue: ${currentGuy.categories[1]}`);
-  if (guesses >= 4) hints.push(`Status clue: ${currentGuy.isDeceased ? "This guy is deceased" : "This guy is living"}`);
+  if (guesses >= 1 && currentGuy.categories?.[0]) {
+    hints.push(`Profession: ${currentGuy.categories[0]}`);
+  }
+
+  if (guesses >= 2) {
+    if (currentGuy.birthYear && currentGuy.age) {
+      hints.push(`Birth year: ${currentGuy.birthYear} (Age ${currentGuy.age})${currentGuy.isDeceased ? " (Deceased)" : ""}`);
+    }
+  }
+
+  if (guesses >= 3 && currentGuy.ethnicity) {
+    hints.push(`Ethnicity: ${currentGuy.ethnicity}`);
+  }
+
+  if (guesses >= 4) {
+    const additionalCategoryStart = 1;
+    const additionalCategoryCount = guesses >= maxGuesses
+      ? (currentGuy.categories || []).length
+      : (guesses - 3) * 2;
+    const additionalCategories = (currentGuy.categories || []).slice(
+      additionalCategoryStart,
+      additionalCategoryStart + additionalCategoryCount
+    );
+    additionalCategories.forEach((category) => hints.push(`Category clue: ${category}`));
+  }
+
   hintListEl.innerHTML = hints.map((hint) => `<li>${hint}</li>`).join("");
-  resultEl.classList.add("visible");
 }
 
 function finishRound(message, state) {
   isRoundOver = true;
+  promptLabelEl.textContent = "Answer";
+  promptTextEl.textContent = currentGuy.name;
+  promptCardEl.className = `prompt-card ${state === "success" ? "answer-success" : "answer-failure"}`;
   answerInputEl.disabled = true;
   document.getElementById("submit-btn").disabled = true;
   skipBtn.disabled = true;
@@ -99,16 +121,26 @@ function finishRound(message, state) {
 }
 
 function chooseGuy() {
-  let availableGuys = guys.filter((guy) => !usedGuyIds.has(guy.id));
+  const sortedGuys = [...guys].sort((first, second) => second.notorietyScore - first.notorietyScore);
+  const thirdSize = Math.ceil(sortedGuys.length / 3);
+  const difficultyRanges = {
+    easy: sortedGuys.slice(0, thirdSize),
+    medium: sortedGuys.slice(thirdSize, thirdSize * 2),
+    hard: sortedGuys.slice(thirdSize * 2)
+  };
+  const difficultyGuys = difficultyRanges[difficulty];
+  let availableGuys = difficultyGuys.filter((guy) => !usedGuyNames.has(normalizeAnswer(guy.name)));
   if (!availableGuys.length) {
-    usedGuyIds.clear();
-    availableGuys = guys;
+    for (const guy of difficultyGuys) usedGuyNames.delete(normalizeAnswer(guy.name));
+    availableGuys = difficultyGuys;
   }
   currentGuy = availableGuys[Math.floor(Math.random() * availableGuys.length)];
-  usedGuyIds.add(currentGuy.id);
+  usedGuyNames.add(normalizeAnswer(currentGuy.name));
   guesses = 0;
   isRoundOver = false;
+  promptLabelEl.textContent = "Prompt";
   promptTextEl.textContent = "Name a Guy";
+  promptCardEl.className = "prompt-card";
   difficultyBadgeEl.textContent = `Guess 1 of ${maxGuesses}`;
   difficultyBadgeEl.className = "difficulty-badge easy";
   answerInputEl.disabled = false;
@@ -191,16 +223,10 @@ function submitGuess(value) {
   difficultyBadgeEl.textContent = `Guess ${Math.min(guesses + 1, maxGuesses)} of ${maxGuesses}`;
 
   if (isCorrect) {
-    score += 10 + streak * 2;
-    streak += 1;
-    scoreEl.textContent = String(score);
-    streakEl.textContent = String(streak);
     finishRound(`Correct! You named ${currentGuy.name}.`, "success");
     return;
   }
 
-  streak = 0;
-  streakEl.textContent = "0";
   livesLeftEl.textContent = String(maxGuesses - guesses);
   if (guesses >= hint1Guess) showHint1();
   if (guesses >= hint2Guess) showHint2();
@@ -230,10 +256,16 @@ skipBtn.addEventListener("click", () => {
 });
 
 newGameBtn.addEventListener("click", () => {
-  score = 0;
-  streak = 0;
-  scoreEl.textContent = "0";
-  streakEl.textContent = "0";
+  chooseGuy();
+});
+
+difficultyOptionsEl.addEventListener("click", (event) => {
+  const option = event.target.closest(".difficulty-option");
+  if (!option) return;
+  difficulty = option.dataset.difficulty;
+  document.querySelectorAll(".difficulty-option").forEach((button) => {
+    button.classList.toggle("active", button === option);
+  });
   chooseGuy();
 });
 

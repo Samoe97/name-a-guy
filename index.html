@@ -7,45 +7,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=3" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
         <div class="brand-wrap">
-          <div class="brand-mark">N</div>
-          <div>
-            <p class="eyebrow">Quiz challenge</p>
-            <h1>NameAGuy</h1>
+          <h1>Name a Guy</h1>
+          <div id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
+            <button class="difficulty-option active" data-difficulty="easy" type="button">Easy</button>
+            <button class="difficulty-option" data-difficulty="medium" type="button">Medium</button>
+            <button class="difficulty-option" data-difficulty="hard" type="button">Hard</button>
           </div>
         </div>
-        <button id="new-game-btn" class="secondary-btn" type="button">New game</button>
+        <div class="header-actions">
+          <button id="new-game-btn" class="secondary-btn" type="button">New game</button>
+        </div>
       </header>
 
-      <main class="game-panel">
-        <section class="score-row">
-          <div class="score-box">
-            <span class="label">Score</span>
-            <strong id="score">0</strong>
-          </div>
-          <div class="score-box">
-            <span class="label">Streak</span>
-            <strong id="streak">0</strong>
-          </div>
-          <div class="score-box">
-            <span class="label">Guesses</span>
-            <strong id="lives-left">6</strong>
-          </div>
-        </section>
-
-        <section class="prompt-card">
+      <div class="game-layout">
+        <main class="game-panel">
+          <section class="prompt-card">
           <div class="prompt-header">
-            <p class="prompt-label">Prompt</p>
+            <p id="prompt-label" class="prompt-label">Prompt</p>
             <span id="difficulty-badge" class="difficulty-badge">Guess 1 of 6</span>
           </div>
           <h2 id="prompt-text">Name a Guy</h2>
-          <ol id="previous-guesses" class="previous-guesses prompt-guesses"></ol>
-        </section>
+          </section>
+
+          <section class="clues-panel" aria-live="polite">
+            <p class="result-label">Clues</p>
+            <ul id="hint-list" class="hint-list"></ul>
+            <div class="vague-hint-block">
+              <p class="result-label">Hint 1</p>
+              <p id="hint-1" class="fun-fact"></p>
+            </div>
+            <div class="fact-block">
+              <p class="result-label">Hint 2</p>
+              <p id="hint-2" class="fun-fact"></p>
+            </div>
+            <div class="shared-tags-block">
+              <p class="result-label">Clues Shared With Previous Guesses</p>
+              <div id="shared-tags" class="tag-list"></div>
+            </div>
+          </section>
 
         <form id="answer-form" class="answer-form">
           <label class="sr-only" for="answer-input">Your answer</label>
@@ -64,31 +69,27 @@
             <button id="submit-btn" class="primary-btn" type="submit">Submit</button>
             <button id="skip-btn" class="secondary-btn" type="button">Reveal answer</button>
           </div>
+          <section class="previous-guesses-panel" aria-live="polite">
+            <p class="result-label">Previous guesses</p>
+            <ol id="previous-guesses" class="previous-guesses"></ol>
+          </section>
         </form>
 
         <p id="feedback" class="feedback" aria-live="polite">Make your guess.</p>
 
         <section id="result" class="result" aria-live="polite">
-          <div class="result-block">
-            <p class="result-label">Shared tags</p>
-            <div id="shared-tags" class="tag-list"></div>
-          </div>
-          <div class="hint-block">
-            <p class="result-label">Clues</p>
-            <ul id="hint-list" class="hint-list"></ul>
-          </div>
-          <div class="vague-hint-block">
-            <p class="result-label">Hint 1</p>
-            <p id="hint-1" class="fun-fact"></p>
-          </div>
-          <div class="fact-block">
-            <p class="result-label">Hint 2</p>
-            <p id="hint-2" class="fun-fact"></p>
-          </div>
         </section>
-      </main>
+        </main>
+
+        <aside class="guess-sidebar">
+          <div class="guess-count">
+            <span class="label">Guesses left</span>
+            <strong id="lives-left">6</strong>
+          </div>
+        </aside>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
