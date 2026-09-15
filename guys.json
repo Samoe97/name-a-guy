@@ -16043,5 +16043,277 @@
     "hint2": "The Oscar-winning actor who starred in *Titanic*, *Inception*, *The Wolf of Wall Street*, and *The Revenant*.",
     "notorietyScore": 98,
     "ethnicity": "White / American-Italian-German"
+  },
+  {
+    "name": "Robert Pattinson",
+    "birthYear": 1986,
+    "age": 40,
+    "isDeceased": false,
+    "categories": [
+      "Actor",
+      "Producer",
+      "Franchise Lead",
+      "British",
+      "Born in 80s",
+      "Film Star"
+    ],
+    "hint1": "A British actor who achieved global teen idol status in a major fantasy romance franchise before pivoting to acclaimed indie and blockbuster cinema.",
+    "hint2": "The star who played Cedric Diggory in *Harry Potter*, vampire Edward Cullen in *Twilight*, and the Dark Knight in *The Batman*.",
+    "notorietyScore": 85,
+    "ethnicity": "White / English"
+  },
+  {
+    "name": "Anthony Bourdain",
+    "birthYear": 1956,
+    "age": 61,
+    "isDeceased": true,
+    "categories": [
+      "Chef",
+      "Author",
+      "Television Host",
+      "Adventurer",
+      "American",
+      "Born in 50s"
+    ],
+    "hint1": "A witty, globetrotting chef and storyteller who used food and travel to explore different cultures with unflinching honesty.",
+    "hint2": "The celebrated author of *Kitchen Confidential* and host of acclaimed culinary travel shows like *No Reservations* and *Parts Unknown*.",
+    "notorietyScore": 65,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Alan Ritchson",
+    "birthYear": 1982,
+    "age": 43,
+    "isDeceased": false,
+    "categories": [
+      "Actor",
+      "Model",
+      "Action Star",
+      "American",
+      "Born in 80s",
+      "Television Star"
+    ],
+    "hint1": "A large-framed American actor who built a career playing superheroes, sci-fi soldiers, and towering law enforcement leads.",
+    "hint2": "The star who played Aquaman in *Smallville*, Gloss in *The Hunger Games: Catching Fire*, and the massive title military drifter in Amazon's *Reacher*.",
+    "notorietyScore": 65,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Derrick Rose",
+    "birthYear": 1988,
+    "age": 37,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Basketball Player",
+      "NBA MVP",
+      "American",
+      "All-Star",
+      "Born in 80s"
+    ],
+    "hint1": "An explosive Chicago-born basketball star who captivated the sports world with his breathtaking speed and athleticism before overcoming severe injuries.",
+    "hint2": "The dynamic point guard who became the youngest player in NBA history to win the regular-season Most Valuable Player award while playing for his hometown team.",
+    "notorietyScore": 60,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Bill Russell",
+    "birthYear": 1934,
+    "age": 88,
+    "isDeceased": true,
+    "categories": [
+      "Athlete",
+      "Basketball Player",
+      "NBA MVP",
+      "Coach",
+      "Civil Rights Activist",
+      "American",
+      "Hall of Famer"
+    ],
+    "hint1": "A legendary defensive titan and pioneer who anchored one of the most prolific championship dynasties in professional sports history.",
+    "hint2": "The iconic Boston Celtics center who won an unmatched 11 NBA championships and later became the league's first Black head coach.",
+    "notorietyScore": 60,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Tim Lincecum",
+    "birthYear": 1984,
+    "age": 42,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Baseball Player",
+      "MLB MVP",
+      "All-Star",
+      "American",
+      "World Champion"
+    ],
+    "hint1": "A famously unorthodox, slender-framed MLB pitcher whose electric velocity and deceptive delivery earned him a legendary nickname.",
+    "hint2": "The multi-time Cy Young Award-winning ace known as 'The Freak' who helped lead the San Francisco Giants to multiple World Series titles.",
+    "notorietyScore": 60,
+    "ethnicity": "Multiracial / Filipino-American"
+  },
+  {
+    "name": "Charlie Parker",
+    "birthYear": 1920,
+    "age": 34,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Saxophonist",
+      "Composer",
+      "Jazz Legend",
+      "American",
+      "Grammy Winner"
+    ],
+    "hint1": "A legendary American jazz virtuoso whose blazing speed and revolutionary harmonic innovations helped invent modern bebop.",
+    "hint2": "The brilliant alto saxophonist nicknamed 'Bird' whose virtuosic improvisations shaped the foundation of modern jazz history.",
+    "notorietyScore": 60,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Muddy Waters",
+    "birthYear": 1913,
+    "age": 70,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Singer",
+      "Guitarist",
+      "Blues Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "A towering pioneer of electric blues whose powerful voice and slide guitar style heavily influenced modern rock and roll.",
+    "hint2": "The legendary Chicago blues icon known for classic Chess Records tracks like 'Hoochie Coochie Man' and 'Mannish Boy'.",
+    "notorietyScore": 60,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Joe Walsh",
+    "birthYear": 1947,
+    "age": 78,
+    "isDeceased": false,
+    "categories": [
+      "Musician",
+      "Guitarist",
+      "Singer",
+      "Rock Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "A celebrated American rock guitarist known for his wicked slide technique, quirky sense of humor, and membership in legendary bands.",
+    "hint2": "The iconic lead guitarist and vocalist for the Eagles who also recorded classic solo hits like 'Life's Been Good'.",
+    "notorietyScore": 65,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Miles Davis",
+    "birthYear": 1926,
+    "age": 65,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Trumpeter",
+      "Composer",
+      "Jazz Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "An iconic American trumpeter and bandleader who continually pioneered shifting eras and stylistic movements in jazz history.",
+    "hint2": "The legendary jazz innovator behind landmark albums like *Kind of Blue* and *Bitches Brew*, known for his muted trumpet sound.",
+    "notorietyScore": 65,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "John Coltrane",
+    "birthYear": 1926,
+    "age": 40,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Saxophonist",
+      "Composer",
+      "Jazz Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "A profoundly spiritual American saxophonist whose intense improvisational exploration expanded the boundaries of modal and avant-garde music.",
+    "hint2": "The legendary tenor and soprano saxophonist known for his virtuosic sheets of sound and the spiritual masterpiece *A Love Supreme*.",
+    "notorietyScore": 60,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Louis Armstrong",
+    "birthYear": 1901,
+    "age": 69,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Trumpeter",
+      "Singer",
+      "Jazz Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "A foundational American music pioneer whose charismatic stage presence, trumpet mastery, and gravelly vocals popularized jazz worldwide.",
+    "hint2": "The legendary New Orleans trumpeter and vocalist affectionately known as 'Satchmo' who helped shape jazz into a global solo art form.",
+    "notorietyScore": 95,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Duke Ellington",
+    "birthYear": 1899,
+    "age": 75,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Pianist",
+      "Composer",
+      "Bandleader",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "A prolific American composer and pianist who led one of the most famous and enduring big bands in musical history.",
+    "hint2": "The legendary bandleader who wrote thousands of jazz compositions and performed at the Cotton Club during the Harlem Renaissance.",
+    "notorietyScore": 70,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Thelonious Monk",
+    "birthYear": 1917,
+    "age": 64,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Pianist",
+      "Composer",
+      "Jazz Legend",
+      "Grammy Winner",
+      "American"
+    ],
+    "hint1": "An eccentric American jazz pianist and composer known for his unique improvisational style, dissonant chord strikes, and fedoras.",
+    "hint2": "The legendary bebop architect and composer of jazz standards like ''Round Midnight' and 'Blue Monk'.",
+    "notorietyScore": 55,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Phil Collins",
+    "birthYear": 1951,
+    "age": 75,
+    "isDeceased": false,
+    "categories": [
+      "Musician",
+      "Drummer",
+      "Singer",
+      "Songwriter",
+      "Grammy Winner",
+      "Oscar Winner",
+      "British"
+    ],
+    "hint1": "A celebrated British rock musician known for anchoring a progressive band behind the drum kit before achieving massive solo pop success.",
+    "hint2": "The legendary Genesis frontman and solo artist famous for hits like 'In the Air Tonight' and winning an Oscar for Disney's *Tarzan* soundtrack.",
+    "notorietyScore": 70,
+    "ethnicity": "White / English"
   }
 ]
