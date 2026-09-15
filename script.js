@@ -45,6 +45,20 @@ function getTags(guy) {
   return [...new Set(guy.categories || [])].filter(Boolean);
 }
 
+function getRevealedCategoryTags() {
+  const revealedCategories = [];
+  if (guesses >= 1 && currentGuy?.categories?.[0]) {
+    revealedCategories.push(currentGuy.categories[0]);
+  }
+  if (guesses >= 4) {
+    const categoryCount = guesses >= maxGuesses
+      ? (currentGuy.categories || []).length
+      : 1 + (guesses - 3) * 2;
+    revealedCategories.push(...(currentGuy.categories || []).slice(1, categoryCount));
+  }
+  return new Set(revealedCategories);
+}
+
 function hideSuggestions() {
   suggestionListEl.classList.remove("visible");
   suggestionListEl.innerHTML = "";
@@ -216,7 +230,10 @@ function submitGuess(value) {
   previousGuesses.push({ name: guess.name, isCorrect });
   renderPreviousGuesses();
   const targetTags = getTags(currentGuy);
-  const sharedTags = getTags(guess).filter((tag) => targetTags.includes(tag));
+  const revealedCategoryTags = getRevealedCategoryTags();
+  const sharedTags = getTags(guess).filter(
+    (tag) => targetTags.includes(tag) && !revealedCategoryTags.has(tag)
+  );
   revealedTags = sharedTags;
   renderSharedTags();
   renderProgressiveHints();
