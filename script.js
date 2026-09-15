@@ -263,13 +263,22 @@ document.addEventListener("click", (event) => {
   if (!answerInputEl.contains(event.target) && !suggestionListEl.contains(event.target)) hideSuggestions();
 });
 
-fetch("./guys.json")
+const dataUrl = new URL("guys.json", document.baseURI);
+
+fetch(dataUrl)
   .then((response) => {
-    if (!response.ok) throw new Error("Could not load guys.json");
+    if (!response.ok) {
+      throw new Error(`Could not load guys.json (${response.status} ${response.statusText})`);
+    }
     return response.json();
   })
   .then((data) => {
+    if (!Array.isArray(data)) throw new Error("guys.json must contain an array");
     guys = [...new Map(data.map((guy) => [normalizeAnswer(guy.name), guy])).values()];
+    if (!guys.length) throw new Error("guys.json contains no people");
     chooseGuy();
   })
-  .catch(() => setFeedback("The guy list could not be loaded.", "error"));
+  .catch((error) => {
+    console.error("NameAGuy data load failed:", error);
+    setFeedback("The guy list could not be loaded.", "error");
+  });
