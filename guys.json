@@ -16007,5 +16007,23 @@
     "hint2": "The unanimous Hall of Fame closer who won five World Series titles anchoring the New York Yankees bullpen.",
     "notorietyScore": 83,
     "ethnicity": "Hispanic / Panamanian"
+  },
+  {
+    "name": "Franklin Delano Roosevelt",
+    "birthYear": 1882,
+    "age": 63,
+    "isDeceased": true,
+    "categories": [
+      "Politician",
+      "US President",
+      "World War II",
+      "American",
+      "Governor",
+      "Born in 1800s"
+    ],
+    "hint1": "A historical American leader elected to an unprecedented number of terms during a period of global and domestic crisis.",
+    "hint2": "The 32nd U.S. President who guided the nation through the Great Depression and World War II while managing his physical disability from his wheelchair.",
+    "notorietyScore": 70,
+    "ethnicity": "White / American"
   }
 ]
