@@ -263,15 +263,28 @@ document.addEventListener("click", (event) => {
   if (!answerInputEl.contains(event.target) && !suggestionListEl.contains(event.target)) hideSuggestions();
 });
 
-const dataUrl = new URL("guys.json", document.baseURI);
+const dataUrls = [...new Set([
+  new URL("guys.json", document.baseURI).href,
+  new URL("../guys.json", document.baseURI).href,
+  new URL("/name-a-guy/guys.json", window.location.origin).href
+])];
 
-fetch(dataUrl)
-  .then((response) => {
+function fetchGuysData(urls) {
+  const [url, ...remainingUrls] = urls;
+  if (!url) return Promise.reject(new Error("Could not find guys.json in any deployment path"));
+
+  return fetch(url, { cache: "no-store" }).then((response) => {
     if (!response.ok) {
-      throw new Error(`Could not load guys.json (${response.status} ${response.statusText})`);
+      throw new Error(`${response.status} ${response.statusText} at ${url}`);
     }
     return response.json();
-  })
+  }).catch((error) => {
+    if (!remainingUrls.length) throw error;
+    return fetchGuysData(remainingUrls);
+  });
+}
+
+fetchGuysData(dataUrls)
   .then((data) => {
     if (!Array.isArray(data)) throw new Error("guys.json must contain an array");
     guys = [...new Map(data.map((guy) => [normalizeAnswer(guy.name), guy])).values()];
