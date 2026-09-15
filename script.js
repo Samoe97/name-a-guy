@@ -263,7 +263,7 @@ document.addEventListener("click", (event) => {
   if (!answerInputEl.contains(event.target) && !suggestionListEl.contains(event.target)) hideSuggestions();
 });
 
-fetch("../guys.json")
+fetch("./guys.json")
   .then((response) => {
     if (!response.ok) throw new Error("Could not load guys.json");
     return response.json();
