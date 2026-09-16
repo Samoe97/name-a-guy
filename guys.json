@@ -147,24 +147,6 @@
     "ethnicity": "White / Scottish"
   },
   {
-    "name": "Dwayne Johnson",
-    "birthYear": 1972,
-    "age": 54,
-    "isDeceased": false,
-    "categories": [
-      "Actor",
-      "Wrestler",
-      "Action Star",
-      "American",
-      "Entrepreneur",
-      "Born in 70s"
-    ],
-    "hint1": "A former college football national champion who reinvented himself into a charismatic entertainment icon.",
-    "hint2": "A third-generation WWE wrestler known as 'The Most Electrifying Man in Sports Entertainment' turned Hollywood action megastar.",
-    "notorietyScore": 909,
-    "ethnicity": "Black & Samoan"
-  },
-  {
     "name": "Lin-Manuel Miranda",
     "birthYear": 1980,
     "age": 46,
@@ -1271,7 +1253,7 @@
   {
     "name": "Steven Spielberg",
     "birthYear": 1946,
-    "age": 79,
+    "age": 78,
     "isDeceased": false,
     "categories": [
       "Director",
@@ -23044,5 +23026,624 @@
     "hint2": "The creator and star of Nathan for You and The Rehearsal, known for building elaborate real-world situations around uncomfortable comedy.",
     "notorietyScore": 520,
     "ethnicity": "White / Canadian"
+  },
+  {
+    "name": "Stove God Cooks",
+    "birthYear": 1983,
+    "age": 43,
+    "isDeceased": false,
+    "categories": [
+      "Musician",
+      "Rapper",
+      "Producer",
+      "Songwriter",
+      "Underground Hip-Hop",
+      "Buffalo",
+      "American",
+      "Born in 80s"
+    ],
+    "hint1": "An underground rapper whose culinary nickname and vivid street storytelling give his music an unmistakable identity.",
+    "hint2": "The Buffalo artist known for Reasonable Drought, collaborations with Roc Marciano, and food-themed luxury-rap imagery.",
+    "notorietyScore": 125,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "David Lynch",
+    "birthYear": 1946,
+    "age": 78,
+    "isDeceased": true,
+    "categories": [
+      "Director",
+      "Screenwriter",
+      "Producer",
+      "Musician",
+      "Visual Artist",
+      "Surrealism",
+      "American",
+      "Born in 40s"
+    ],
+    "hint1": "An American artist known for unsettling dream logic, strange small-town worlds, and a distinctive fascination with sound and atmosphere.",
+    "hint2": "The filmmaker behind Eraserhead, Blue Velvet, Mulholland Drive, and Twin Peaks, who also received the Palme d'Or for Wild at Heart.",
+    "notorietyScore": 875,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Kyle MacLachlan",
+    "birthYear": 1959,
+    "age": 67,
+    "isDeceased": false,
+    "categories": [
+      "Actor",
+      "American",
+      "TV Star",
+      "Film",
+      "Surrealism",
+      "Musician",
+      "David Lynch Collaborator",
+      "Born in 50s"
+    ],
+    "hint1": "An American actor known for an elegant, eccentric screen presence and long-running collaborations with an auteur filmmaker.",
+    "hint2": "The performer who played Agent Dale Cooper in Twin Peaks, Paul Atreides in Dune, and a troubled character in Blue Velvet.",
+    "notorietyScore": 720,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Callum Turner",
+    "birthYear": 1990,
+    "age": 36,
+    "isDeceased": false,
+    "categories": [
+      "Actor",
+      "British",
+      "Film",
+      "Television",
+      "Period Drama",
+      "War Drama",
+      "Born in 90s"
+    ],
+    "hint1": "A British actor known for understated intensity in period pieces, literary adaptations, and modern television dramas.",
+    "hint2": "The actor who played Theseus Scamander in the Fantastic Beasts films and John 'Bucky' Egan in Masters of the Air.",
+    "notorietyScore": 480,
+    "ethnicity": "White / British"
+  },
+  {
+    "name": "Jimi Hendrix",
+    "birthYear": 1942,
+    "age": 27,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Guitarist",
+      "Singer",
+      "Songwriter",
+      "Rock Star",
+      "Psychedelic Rock",
+      "American",
+      "Born in 40s"
+    ],
+    "hint1": "A groundbreaking musician whose imaginative electric-guitar sound transformed the possibilities of rock performance.",
+    "hint2": "The guitarist behind Purple Haze and All Along the Watchtower whose incendiary Woodstock performance became legendary.",
+    "notorietyScore": 980,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Steve Kerr",
+    "birthYear": 1965,
+    "age": 61,
+    "isDeceased": false,
+    "categories": [
+      "Coach",
+      "Athlete",
+      "Basketball",
+      "NBA",
+      "Champion",
+      "Three-Point Shooter",
+      "American",
+      "Born in 60s"
+    ],
+    "hint1": "A highly successful basketball figure whose career moved from precise perimeter shooting into championship-level coaching.",
+    "hint2": "The former Bulls and Spurs guard who made a famous championship-winning shot and later coached the Golden State Warriors to multiple NBA titles.",
+    "notorietyScore": 820,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Klay Thompson",
+    "birthYear": 1990,
+    "age": 36,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Basketball",
+      "NBA",
+      "Shooting Guard",
+      "Three-Point Shooter",
+      "Champion",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "An elite basketball shooter known for calm perimeter play, championship success, and explosive scoring bursts.",
+    "hint2": "The Golden State Warriors star who formed the Splash Brothers with Stephen Curry and scored 60 points in just 29 minutes.",
+    "notorietyScore": 850,
+    "ethnicity": "Multiracial / Bahamian-American"
+  },
+  {
+    "name": "Stevie Ray Vaughan",
+    "birthYear": 1954,
+    "age": 35,
+    "isDeceased": true,
+    "categories": [
+      "Musician",
+      "Guitarist",
+      "Singer",
+      "Songwriter",
+      "Blues Rock",
+      "Texas",
+      "American",
+      "Born in 50s"
+    ],
+    "hint1": "A virtuosic American musician whose powerful blues playing helped revive electric-guitar music for a new generation.",
+    "hint2": "The Texas guitarist behind Pride and Joy and Texas Flood who played a famed version of Little Wing and performed at Live Aid.",
+    "notorietyScore": 900,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Caleb Williams",
+    "birthYear": 2001,
+    "age": 25,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Chicago Bears",
+      "First Overall Pick",
+      "American",
+      "Born in 00s"
+    ],
+    "hint1": "A young American quarterback known for improvisation, arm talent, and a highly visible rise from college football to the pros.",
+    "hint2": "The former USC star selected first overall by the Chicago Bears after winning the 2022 Heisman Trophy.",
+    "notorietyScore": 620,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Wilt Chamberlain",
+    "birthYear": 1936,
+    "age": 63,
+    "isDeceased": true,
+    "categories": [
+      "Athlete",
+      "Basketball",
+      "NBA",
+      "Center",
+      "MVP",
+      "Champion",
+      "Record Holder",
+      "American",
+      "Born in 30s"
+    ],
+    "hint1": "A towering basketball pioneer whose size, scoring, and rebounding made statistical achievements seem almost unreal.",
+    "hint2": "The NBA legend who scored 100 points in one game, averaged 50.4 points in a season, and won two championships.",
+    "notorietyScore": 950,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Mike Ditka",
+    "birthYear": 1939,
+    "age": 87,
+    "isDeceased": false,
+    "categories": [
+      "Coach",
+      "Athlete",
+      "Football",
+      "NFL",
+      "Tight End",
+      "Chicago Bears",
+      "Champion",
+      "American",
+      "Born in 30s"
+    ],
+    "hint1": "A hard-nosed football figure who became famous both for playing with force and coaching with an uncompromising style.",
+    "hint2": "The Hall of Fame tight end and coach who led the 1985 Chicago Bears to a dominant Super Bowl title.",
+    "notorietyScore": 820,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Jerome Bettis",
+    "birthYear": 1972,
+    "age": 54,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Running Back",
+      "Pittsburgh Steelers",
+      "Champion",
+      "American",
+      "Born in 70s"
+    ],
+    "hint1": "A powerful football runner whose size and steady production made him one of his era's most recognizable backs.",
+    "hint2": "The Steelers running back nicknamed The Bus who won Super Bowl XL and finished his career among the NFL's leading rushers.",
+    "notorietyScore": 700,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Ben Roethlisberger",
+    "birthYear": 1982,
+    "age": 44,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Pittsburgh Steelers",
+      "Champion",
+      "American",
+      "Born in 80s"
+    ],
+    "hint1": "A large, durable quarterback known for extending plays and leading a long-running American football franchise.",
+    "hint2": "The Steelers quarterback who won two Super Bowls and became one of the franchise's defining modern players.",
+    "notorietyScore": 790,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "James Harrison",
+    "birthYear": 1978,
+    "age": 48,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Linebacker",
+      "Pittsburgh Steelers",
+      "Champion",
+      "American",
+      "Born in 70s"
+    ],
+    "hint1": "A ferocious defensive football player known for explosive hits, relentless conditioning, and intimidating intensity.",
+    "hint2": "The Steelers linebacker whose long touchdown return in Super Bowl XLIII became one of the game's most famous defensive plays.",
+    "notorietyScore": 650,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Rich Gannon",
+    "birthYear": 1965,
+    "age": 61,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "MVP",
+      "Oakland Raiders",
+      "American",
+      "Born in 60s"
+    ],
+    "hint1": "A late-blooming quarterback whose accuracy and mobility eventually made him a standout leader.",
+    "hint2": "The Raiders quarterback who won the 2002 NFL MVP award and led Oakland to Super Bowl XXXVII.",
+    "notorietyScore": 610,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Jon Gruden",
+    "birthYear": 1963,
+    "age": 63,
+    "isDeceased": false,
+    "categories": [
+      "Coach",
+      "Football",
+      "NFL",
+      "Tampa Bay Buccaneers",
+      "Champion",
+      "Broadcaster",
+      "American",
+      "Born in 60s"
+    ],
+    "hint1": "A fiery football strategist recognized for intense sideline energy and detailed offensive preparation.",
+    "hint2": "The coach who led the Tampa Bay Buccaneers to victory in Super Bowl XXXVII against his former team.",
+    "notorietyScore": 730,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Deshaun Watson",
+    "birthYear": 1995,
+    "age": 31,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Cleveland Browns",
+      "Houston Texans",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A mobile quarterback whose early professional career combined improvisation, rushing ability, and high expectations.",
+    "hint2": "The former Clemson star who led the Tigers to the 2016 national championship before becoming a first-round NFL pick.",
+    "notorietyScore": 520,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Khalil Mack",
+    "birthYear": 1991,
+    "age": 35,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Linebacker",
+      "Defensive Player",
+      "Chicago Bears",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A dominant defensive football player known for power, speed, and making quarterbacks uncomfortable.",
+    "hint2": "The linebacker who won Defensive Player of the Year after a spectacular first season with the Chicago Bears.",
+    "notorietyScore": 720,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Keenan Allen",
+    "birthYear": 1992,
+    "age": 34,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Wide Receiver",
+      "Route Runner",
+      "Los Angeles Chargers",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A precise football receiver known for route craft, reliable hands, and detailed separation from defenders.",
+    "hint2": "The longtime Chargers receiver who became one of the NFL's most productive high-volume pass catchers.",
+    "notorietyScore": 610,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Andrew Luck",
+    "birthYear": 1989,
+    "age": 37,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Indianapolis Colts",
+      "Stanford",
+      "American",
+      "Born in 80s"
+    ],
+    "hint1": "A cerebral quarterback whose intelligence, toughness, and early success made his sudden retirement especially memorable.",
+    "hint2": "The Stanford star selected first overall by the Colts who earned multiple Pro Bowl selections before retiring at 29.",
+    "notorietyScore": 760,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Roger Goodell",
+    "birthYear": 1959,
+    "age": 67,
+    "isDeceased": false,
+    "categories": [
+      "Executive",
+      "Football",
+      "NFL",
+      "Commissioner",
+      "Sports Business",
+      "American",
+      "Born in 50s"
+    ],
+    "hint1": "A sports executive whose decisions and discipline policies have made him one of American football's most visible administrators.",
+    "hint2": "The NFL commissioner who succeeded Paul Tagliabue and oversees the league's draft, discipline, and business operations.",
+    "notorietyScore": 560,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Adam Silver",
+    "birthYear": 1962,
+    "age": 64,
+    "isDeceased": false,
+    "categories": [
+      "Executive",
+      "Basketball",
+      "NBA",
+      "Commissioner",
+      "Sports Business",
+      "American",
+      "Born in 60s"
+    ],
+    "hint1": "A sports executive who has guided a major American league through expansion, technology, and high-profile controversies.",
+    "hint2": "The NBA commissioner who succeeded David Stern and oversaw the league's modern media and player-policy era.",
+    "notorietyScore": 600,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Antonio Brown",
+    "birthYear": 1988,
+    "age": 38,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Wide Receiver",
+      "Pittsburgh Steelers",
+      "Champion",
+      "American",
+      "Born in 80s"
+    ],
+    "hint1": "A spectacular but controversial football receiver known for elite footwork, production, and a highly public career.",
+    "hint2": "The former Steelers star who led the league in receiving twice and won a Super Bowl with Tampa Bay.",
+    "notorietyScore": 720,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "The Rizzler",
+    "birthYear": 2013,
+    "age": 13,
+    "isDeceased": false,
+    "categories": [
+      "Internet Personality",
+      "Comedian",
+      "Content Creator",
+      "TikTok",
+      "Meme",
+      "American",
+      "Born in 10s"
+    ],
+    "hint1": "A young internet personality whose exaggerated confidence and catchphrases became a recognizable meme among younger audiences.",
+    "hint2": "The viral kid creator known for dramatic facial expressions and appearances in online family-content videos.",
+    "notorietyScore": 180,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Michael Irvin",
+    "birthYear": 1966,
+    "age": 60,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Wide Receiver",
+      "Dallas Cowboys",
+      "Champion",
+      "Broadcaster",
+      "American",
+      "Born in 60s"
+    ],
+    "hint1": "A charismatic football receiver whose intensity and showmanship made him a centerpiece of a famous dynasty.",
+    "hint2": "The Cowboys Hall of Famer known as The Playmaker who won three Super Bowls and later became a television analyst.",
+    "notorietyScore": 800,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Tony Romo",
+    "birthYear": 1980,
+    "age": 46,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Dallas Cowboys",
+      "Broadcaster",
+      "American",
+      "Born in 80s"
+    ],
+    "hint1": "A quarterback turned broadcaster known for improvisational play and unusually predictive football analysis.",
+    "hint2": "The former Cowboys quarterback who became a widely praised CBS NFL color commentator after retiring.",
+    "notorietyScore": 780,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Bill Belichick",
+    "birthYear": 1952,
+    "age": 74,
+    "isDeceased": false,
+    "categories": [
+      "Coach",
+      "Football",
+      "NFL",
+      "New England Patriots",
+      "Champion",
+      "Strategist",
+      "American",
+      "Born in 50s"
+    ],
+    "hint1": "A famously terse football strategist whose preparation and adaptability produced one of the sport's longest dynasties.",
+    "hint2": "The Patriots coach who won six Super Bowls with Tom Brady and is known for the phrase Do Your Job.",
+    "notorietyScore": 930,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Lamar Jackson",
+    "birthYear": 1997,
+    "age": 29,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "Baltimore Ravens",
+      "MVP",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A dynamic quarterback whose speed, open-field instincts, and unusual rushing production changed expectations for the position.",
+    "hint2": "The Ravens star who won the 2019 MVP unanimously and became the first quarterback to rush for 1,000 yards twice.",
+    "notorietyScore": 850,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Brock Purdy",
+    "birthYear": 1999,
+    "age": 27,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Quarterback",
+      "San Francisco 49ers",
+      "Mr. Irrelevant",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A young quarterback whose unexpected rise turned a low draft position into a major sports storyline.",
+    "hint2": "The 49ers quarterback nicknamed Mr. Irrelevant who led San Francisco deep into the playoffs after being the final pick of his draft.",
+    "notorietyScore": 700,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Christian McCaffrey",
+    "birthYear": 1996,
+    "age": 30,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Running Back",
+      "San Francisco 49ers",
+      "All-Purpose",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A versatile football runner known for combining explosive rushing with unusually strong receiving production.",
+    "hint2": "The Stanford product who became an NFL Offensive Player of the Year and starred for the 49ers in Super Bowl LVIII.",
+    "notorietyScore": 790,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Malcolm Butler",
+    "birthYear": 1990,
+    "age": 36,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Football",
+      "NFL",
+      "Cornerback",
+      "New England Patriots",
+      "Champion",
+      "American",
+      "Born in 90s"
+    ],
+    "hint1": "A defensive football player whose biggest moment arrived suddenly on the sport's largest stage.",
+    "hint2": "The Patriots cornerback whose late interception at the goal line sealed Super Bowl XLIX against Seattle.",
+    "notorietyScore": 730,
+    "ethnicity": "Black / African American"
   }
 ]
