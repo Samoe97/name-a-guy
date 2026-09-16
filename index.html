@@ -14,11 +14,12 @@
       <header class="topbar">
         <div class="brand-wrap">
           <h1>Name a Guy</h1>
-          <div id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
-            <button class="difficulty-option active" data-difficulty="easy" type="button">Easy</button>
-            <button class="difficulty-option" data-difficulty="medium" type="button">Medium</button>
-            <button class="difficulty-option" data-difficulty="hard" type="button">Hard</button>
-          </div>
+          <label class="sr-only" for="difficulty-options">Difficulty</label>
+          <select id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
         </div>
         <div class="header-actions">
           <button id="new-game-btn" class="secondary-btn" type="button">New game</button>
@@ -29,10 +30,10 @@
         <main class="game-panel">
           <section class="prompt-card">
           <div class="prompt-header">
-            <p id="prompt-label" class="prompt-label">Prompt</p>
+            <p id="prompt-label" class="prompt-label"></p>
             <span id="difficulty-badge" class="difficulty-badge">Guess 1 of 6</span>
           </div>
-          <h2 id="prompt-text">Name a Guy</h2>
+          <h2 id="prompt-text"></h2>
           </section>
 
           <section class="clues-panel" aria-live="polite">

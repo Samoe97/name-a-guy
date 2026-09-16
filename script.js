@@ -155,8 +155,8 @@ function chooseGuy() {
   usedGuyNames.add(normalizeAnswer(currentGuy.name));
   guesses = 0;
   isRoundOver = false;
-  promptLabelEl.textContent = "Prompt";
-  promptTextEl.textContent = "Name a Guy";
+  promptLabelEl.textContent = "";
+  promptTextEl.textContent = "";
   promptCardEl.className = "prompt-card";
   difficultyBadgeEl.textContent = `Guess 1 of ${maxGuesses}`;
   difficultyBadgeEl.className = "difficulty-badge easy";
@@ -279,13 +279,8 @@ newGameBtn.addEventListener("click", () => {
   chooseGuy();
 });
 
-difficultyOptionsEl.addEventListener("click", (event) => {
-  const option = event.target.closest(".difficulty-option");
-  if (!option) return;
-  difficulty = option.dataset.difficulty;
-  document.querySelectorAll(".difficulty-option").forEach((button) => {
-    button.classList.toggle("active", button === option);
-  });
+difficultyOptionsEl.addEventListener("change", (event) => {
+  difficulty = event.target.value;
   chooseGuy();
 });
 
