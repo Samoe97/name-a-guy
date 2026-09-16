@@ -77,7 +77,7 @@ function renderSharedTags() {
 
 function renderPreviousGuesses() {
   previousGuessesEl.innerHTML = previousGuesses.length
-    ? previousGuesses.map(({ name, isCorrect }) => `<li><span>${name}</span><span class="${isCorrect ? "correct-label" : "incorrect-label"}">${isCorrect ? "Correct" : "Incorrect"}</span></li>`).join("")
+    ? previousGuesses.map(({ name, isCorrect }) => `<li><span>${name}</span><span class="${isCorrect ? "correct-label" : "incorrect-label"}" aria-label="${isCorrect ? "Correct" : "Incorrect"}">${isCorrect ? "✓" : "X"}</span></li>`).join("")
     : "";
   previousGuessesEl.classList.toggle("visible", previousGuesses.length > 0);
 }
@@ -128,6 +128,9 @@ function finishRound(message, state) {
   promptLabelEl.textContent = "Answer";
   promptTextEl.textContent = currentGuy.name;
   promptCardEl.className = `prompt-card ${state === "success" ? "answer-success" : "answer-failure"}`;
+  if (state === "success") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   answerInputEl.disabled = true;
   document.getElementById("submit-btn").disabled = true;
   skipBtn.disabled = true;
@@ -136,11 +139,11 @@ function finishRound(message, state) {
 
 function chooseGuy() {
   const sortedGuys = [...guys].sort((first, second) => second.notorietyScore - first.notorietyScore);
-  const thirdSize = Math.ceil(sortedGuys.length / 3);
+  const fifthSize = Math.ceil(sortedGuys.length * 0.2);
   const difficultyRanges = {
-    easy: sortedGuys.slice(0, thirdSize),
-    medium: sortedGuys.slice(thirdSize, thirdSize * 2),
-    hard: sortedGuys.slice(thirdSize * 2)
+    easy: sortedGuys.slice(0, fifthSize),
+    medium: sortedGuys.slice(fifthSize, sortedGuys.length - fifthSize),
+    hard: sortedGuys.slice(sortedGuys.length - fifthSize)
   };
   const difficultyGuys = difficultyRanges[difficulty];
   let availableGuys = difficultyGuys.filter((guy) => !usedGuyNames.has(normalizeAnswer(guy.name)));

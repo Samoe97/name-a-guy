@@ -23024,5 +23024,25 @@
     "hint2": "The Oscar-nominated star of Good Night, and Good Luck., known for portraying journalist Edward R. Murrow.",
     "notorietyScore": 590,
     "ethnicity": "White / American"
+  },
+  {
+    "name": "Nathan Fielder",
+    "birthYear": 1983,
+    "age": 43,
+    "isDeceased": false,
+    "categories": [
+      "Comedian",
+      "Writer",
+      "Director",
+      "Producer",
+      "TV Star",
+      "Deadpan Comedy",
+      "Canadian",
+      "Born in 80s"
+    ],
+    "hint1": "A deadpan comedy creator known for turning awkward social experiments and elaborate planning into surreal television.",
+    "hint2": "The creator and star of Nathan for You and The Rehearsal, known for building elaborate real-world situations around uncomfortable comedy.",
+    "notorietyScore": 520,
+    "ethnicity": "White / Canadian"
   }
 ]
