@@ -26631,5 +26631,63 @@
     "hint2": "The YouTuber and Misfits Boxing co-founder who also records rap music and helped launch the Prime beverage brand.",
     "notorietyScore": 700,
     "ethnicity": "Black / British-Nigerian"
+  },
+  {
+    "name": "Paul Thomas Anderson",
+    "birthYear": 1970,
+    "age": 56,
+    "isDeceased": false,
+    "categories": [
+      "Director",
+      "Screenwriter",
+      "Producer",
+      "Oscar Nominee",
+      "American",
+      "Auteur",
+      "Born in 70s"
+    ],
+    "hint1": "An American filmmaker known for sprawling character studies, long tracking shots, and stories set against fiercely competitive worlds.",
+    "hint2": "The director behind Boogie Nights, Magnolia, There Will Be Blood, and Licorice Pizza, often collaborating with Daniel Day-Lewis and Philip Seymour Hoffman.",
+    "notorietyScore": 520,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "Wes Anderson",
+    "birthYear": 1969,
+    "age": 57,
+    "isDeceased": false,
+    "categories": [
+      "Director",
+      "Screenwriter",
+      "Producer",
+      "Stop-Motion",
+      "American",
+      "Auteur",
+      "Born in 60s"
+    ],
+    "hint1": "A filmmaker recognized for meticulously composed frames, dry humor, symmetrical visuals, and recurring ensemble performers.",
+    "hint2": "The director of The Royal Tenenbaums, The Grand Budapest Hotel, Fantastic Mr. Fox, and Asteroid City, famous for a distinctive storybook style.",
+    "notorietyScore": 570,
+    "ethnicity": "White / American"
+  },
+  {
+    "name": "John Carpenter",
+    "birthYear": 1948,
+    "age": 78,
+    "isDeceased": false,
+    "categories": [
+      "Director",
+      "Screenwriter",
+      "Composer",
+      "Producer",
+      "Horror",
+      "American",
+      "Auteur",
+      "Born in 40s"
+    ],
+    "hint1": "An American filmmaker known for atmospheric genre stories, synth-heavy scores, practical effects, and isolated protagonists facing overwhelming threats.",
+    "hint2": "The director behind Halloween, The Thing, Escape from New York, and They Live, who frequently composed the music for his own films.",
+    "notorietyScore": 650,
+    "ethnicity": "White / American"
   }
 ]
