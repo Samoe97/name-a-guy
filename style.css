@@ -51,7 +51,7 @@ body {
   gap: 20px;
 }
 .page-shell {
-  width: min(1040px, 100%);
+  width: min(820px, 100%);
   margin: 0 auto;
 }
 
