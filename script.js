@@ -8,7 +8,6 @@ function normalizeAnswer(value) {
     .trim();
 }
 
-const livesLeftEl = document.getElementById("lives-left");
 const promptTextEl = document.getElementById("prompt-text");
 const promptLabelEl = document.getElementById("prompt-label");
 const promptCardEl = document.querySelector(".prompt-card");
@@ -17,7 +16,7 @@ const feedbackEl = document.getElementById("feedback");
 const answerForm = document.getElementById("answer-form");
 const newGameBtn = document.getElementById("new-game-btn");
 const skipBtn = document.getElementById("skip-btn");
-const difficultyBadgeEl = document.getElementById("difficulty-badge");
+const guessDotsEl = document.getElementById("guess-dots");
 const suggestionListEl = document.getElementById("suggestions");
 const sharedTagsEl = document.getElementById("shared-tags");
 const hint1El = document.getElementById("hint-1");
@@ -87,6 +86,18 @@ function renderPreviousGuesses() {
     ? previousGuesses.map(({ name, isCorrect }) => `<li><span>${name}</span><span class="${isCorrect ? "correct-label" : "incorrect-label"}" aria-label="${isCorrect ? "Correct" : "Incorrect"}">${isCorrect ? "✓" : "X"}</span></li>`).join("")
     : "";
   previousGuessesEl.classList.toggle("visible", previousGuesses.length > 0);
+}
+
+function renderGuessDots() {
+  guessDotsEl.innerHTML = Array.from({ length: maxGuesses }, (_, index) => {
+    const guess = previousGuesses[index];
+    const state = guess ? (guess.isCorrect ? "correct" : "incorrect") : "unused";
+    const label = guess
+      ? `${guess.isCorrect ? "Correct" : "Incorrect"} guess ${index + 1}`
+      : `Unused guess ${index + 1}`;
+    return `<span class="guess-dot ${state}" aria-label="${label}" role="img"></span>`;
+  }).join("");
+  guessDotsEl.setAttribute("aria-label", `${maxGuesses - previousGuesses.length} guesses remaining`);
 }
 
 function showHint1() {
@@ -165,15 +176,14 @@ function chooseGuy() {
   promptLabelEl.textContent = "";
   promptTextEl.textContent = "";
   promptCardEl.className = "prompt-card";
-  difficultyBadgeEl.textContent = `Guess 1 of ${maxGuesses}`;
-  difficultyBadgeEl.className = "difficulty-badge easy";
+  renderGuessDots();
   answerInputEl.disabled = false;
   document.getElementById("submit-btn").disabled = false;
   skipBtn.disabled = false;
   answerInputEl.value = "";
-  livesLeftEl.textContent = String(maxGuesses);
   revealedTags = [];
   previousGuesses = [];
+  renderGuessDots();
   sharedTagsEl.innerHTML = "";
   hintListEl.innerHTML = "";
   renderPreviousGuesses();
@@ -239,6 +249,7 @@ function submitGuess(value) {
   guesses += 1;
   previousGuesses.push({ name: guess.name, isCorrect });
   renderPreviousGuesses();
+  renderGuessDots();
   const targetTags = getTags(currentGuy);
   const revealedCategoryTags = getRevealedCategoryTags();
   const sharedTags = getTags(guess).filter(
@@ -247,14 +258,11 @@ function submitGuess(value) {
   revealedTags = sharedTags;
   renderSharedTags();
   renderProgressiveHints();
-  difficultyBadgeEl.textContent = `Guess ${Math.min(guesses + 1, maxGuesses)} of ${maxGuesses}`;
-
   if (isCorrect) {
     finishRound(`Correct! You named ${currentGuy.name}.`, "success");
     return;
   }
 
-  livesLeftEl.textContent = String(maxGuesses - guesses);
   if (guesses >= hint1Guess) showHint1();
   if (guesses >= hint2Guess) showHint2();
   if (guesses >= maxGuesses) {

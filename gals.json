@@ -19,7 +19,7 @@
         "ethnicity":  "White / American"
     },
     {
-        "name":  "BeyoncÃ©",
+        "name":  "Beyoncé",
         "birthYear":  1981,
         "age":  45,
         "isDeceased":  false,
@@ -1291,7 +1291,7 @@
         "ethnicity":  "White / British"
     },
     {
-        "name":  "RenÃ©e Zellweger",
+        "name":  "Renée Zellweger",
         "birthYear":  1969,
         "age":  57,
         "isDeceased":  false,
@@ -2527,7 +2527,7 @@
         "ethnicity":  "Black / African American"
     },
     {
-        "name":  "Janelle MonÃ¡e",
+        "name":  "Janelle Monáe",
         "birthYear":  1985,
         "age":  41,
         "isDeceased":  false,
@@ -2923,7 +2923,7 @@
         "ethnicity":  "Iranian-American"
     },
     {
-        "name":  "Katalin KarikÃ³",
+        "name":  "Katalin Karikó",
         "birthYear":  1955,
         "age":  71,
         "isDeceased":  false,
@@ -3787,7 +3787,7 @@
         "ethnicity":  "Black / African American"
     },
     {
-        "name":  "Gisele BÃ¼ndchen",
+        "name":  "Gisele Bündchen",
         "birthYear":  1980,
         "age":  46,
         "isDeceased":  false,
@@ -3931,7 +3931,7 @@
         "ethnicity":  "White / British"
     },
     {
-        "name":  "PenÃ©lope Cruz",
+        "name":  "Penélope Cruz",
         "birthYear":  1974,
         "age":  52,
         "isDeceased":  false,
@@ -5065,7 +5065,7 @@
         "ethnicity":  "White / American"
     },
     {
-        "name":  "BrenÃ© Brown",
+        "name":  "Brené Brown",
         "birthYear":  1965,
         "age":  61,
         "isDeceased":  false,
@@ -5191,7 +5191,7 @@
         "ethnicity":  "White / Armenian-American"
     },
     {
-        "name":  "KhloÃ© Kardashian",
+        "name":  "Khloé Kardashian",
         "birthYear":  1984,
         "age":  42,
         "isDeceased":  false,
@@ -6577,7 +6577,7 @@
         "ethnicity":  "White / British"
     },
     {
-        "name":  "MÃ½a",
+        "name":  "Mýa",
         "birthYear":  1979,
         "age":  47,
         "isDeceased":  false,
@@ -7819,7 +7819,7 @@
         "ethnicity":  "White / American"
     },
     {
-        "name":  "Emma GonzÃ¡lez",
+        "name":  "Emma González",
         "birthYear":  1999,
         "age":  27,
         "isDeceased":  false,
@@ -7873,7 +7873,7 @@
         "ethnicity":  "Black / African American"
     },
     {
-        "name":  "KimberlÃ© Crenshaw",
+        "name":  "Kimberlé Crenshaw",
         "birthYear":  1959,
         "age":  67,
         "isDeceased":  false,
@@ -8215,7 +8215,7 @@
         "ethnicity":  "Black / African American"
     },
     {
-        "name":  "Carol TomÃ©",
+        "name":  "Carol Tomé",
         "birthYear":  1957,
         "age":  69,
         "isDeceased":  false,
@@ -8359,7 +8359,7 @@
         "ethnicity":  "White / American"
     },
     {
-        "name":  "Nely GalÃ¡n",
+        "name":  "Nely Galán",
         "birthYear":  1963,
         "age":  63,
         "isDeceased":  false,
@@ -10231,7 +10231,7 @@
         "ethnicity":  "Multiracial / Hispanic \u0026 White-American"
     },
     {
-        "name":  "ReneÃ© Rapp",
+        "name":  "Reneé Rapp",
         "birthYear":  2000,
         "age":  26,
         "isDeceased":  false,
@@ -12103,7 +12103,7 @@
         "ethnicity":  "White / American"
     },
     {
-        "name":  "Jessica ParÃ©",
+        "name":  "Jessica Paré",
         "birthYear":  1980,
         "age":  46,
         "isDeceased":  false,
@@ -12121,7 +12121,7 @@
         "ethnicity":  "White / Canadian"
     },
     {
-        "name":  "MÃ¤dchen Amick",
+        "name":  "Mädchen Amick",
         "birthYear":  1970,
         "age":  56,
         "isDeceased":  false,
@@ -12227,24 +12227,6 @@
         "hint2":  "She played Toni Topaz on Riverdale.",
         "notorietyScore":  349,
         "ethnicity":  "Multiracial / Black \u0026 Scottish-Canadian"
-    },
-    {
-        "name":  "MÃ¤dchen Amick II",
-        "birthYear":  1970,
-        "age":  56,
-        "isDeceased":  false,
-        "categories":  [
-                           "Actress",
-                           "Producer",
-                           "American",
-                           "Drama",
-                           "Television",
-                           "Born in 70s"
-                       ],
-        "hint1":  "A television performer built a career in mysterious and supernatural ensemble dramas.",
-        "hint2":  "She played Alice Cooper in Riverdale after appearing in Twin Peaks.",
-        "notorietyScore":  308,
-        "ethnicity":  "White / American"
     },
     {
         "name":  "Camryn Manheim",
@@ -14191,7 +14173,7 @@
         "ethnicity":  "White / British"
     },
     {
-        "name":  "ChlÃ¶e Bailey",
+        "name":  "Chlöe Bailey",
         "birthYear":  1998,
         "age":  28,
         "isDeceased":  false,
@@ -14227,7 +14209,7 @@
         "ethnicity":  "Black / African American"
     },
     {
-        "name":  "Victoria MonÃ©t",
+        "name":  "Victoria Monét",
         "birthYear":  1989,
         "age":  37,
         "isDeceased":  false,
@@ -14623,7 +14605,7 @@
         "ethnicity":  "White / Italian-American"
     },
     {
-        "name":  "ChloÃ© Zhao",
+        "name":  "Chloé Zhao",
         "birthYear":  1982,
         "age":  44,
         "isDeceased":  false,
@@ -17809,7 +17791,6 @@
     {"name":"Zoe Kravitz","birthYear":1988,"age":37,"isDeceased":false,"categories":["Actor","Musician","Director","American","Film","Born in 80s"],"hint1":"The daughter of two celebrated artists built a career across acting, music, and filmmaking.","hint2":"She played Catwoman in The Batman, starred in Big Little Lies, and directed Blink Twice.","notorietyScore":585,"ethnicity":"Multiracial / Black, White & Jewish-American"},
     {"name":"Amanda Peet","birthYear":1972,"age":54,"isDeceased":false,"categories":["Actor","Writer","Producer","American","Film","Born in 70s"],"hint1":"A performer moved between romantic comedies, dramas, television, and writing for the stage and screen.","hint2":"Known for The Whole Nine Yards, Something's Gotta Give, and the series Dirty John.","notorietyScore":405,"ethnicity":"White / American"},
     {"name":"Megan Fox","birthYear":1986,"age":40,"isDeceased":false,"categories":["Actor","Model","American","Action Star","Film","Born in 80s"],"hint1":"A performer became a major screen presence through action roles and a striking genre-film persona.","hint2":"The Transformers star who played Mikaela Banes and later led the dark comedy Jennifer's Body.","notorietyScore":654,"ethnicity":"White / American"},
-    {"name":"Gisele Bündchen","birthYear":1980,"age":46,"isDeceased":false,"categories":["Model","Entrepreneur","Brazilian-American","Fashion Icon","Environmentalist","Born in 80s"],"hint1":"A Brazilian-born fashion figure became one of the most recognizable models in the world while building business ventures.","hint2":"A longtime leading face of global fashion who also served as a United Nations environment ambassador.","notorietyScore":654,"ethnicity":"White / Brazilian"},
     {"name":"Penelope Cruz","birthYear":1974,"age":52,"isDeceased":false,"categories":["Actor","Model","Spanish","Film","Oscar Winner","Born in 70s"],"hint1":"A Spanish performer became an international star through collaborations with acclaimed directors and major studio films.","hint2":"She won an Oscar for Vicky Cristina Barcelona and appeared in Volver and the Pirates of the Caribbean series.","notorietyScore":654,"ethnicity":"White / Spanish"},
     {"name":"Elizabeth Debicki","birthYear":1990,"age":36,"isDeceased":false,"categories":["Actor","Australian","British","Television","Film","Born in 90s"],"hint1":"A tall, classically trained performer moved from independent films to prestige television and major franchises.","hint2":"She portrayed Princess Diana in The Crown and appeared in The Great Gatsby and Tenet.","notorietyScore":474,"ethnicity":"White / Australian"},
     {"name":"Jodie Whittaker","birthYear":1982,"age":44,"isDeceased":false,"categories":["Actor","British","Television","Science Fiction","Drama","Born in 80s"],"hint1":"A British performer became a landmark leading figure in a long-running science-fiction series.","hint2":"She became the first woman to play the Doctor in Doctor Who and also starred in Broadchurch.","notorietyScore":585,"ethnicity":"White / British"},

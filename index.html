@@ -6,8 +6,8 @@
     <title>NameAGuy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=6" />
   </head>
   <body>
     <div class="page-shell">
@@ -20,24 +20,28 @@
               <option value="gal">Gal</option>
             </select>
           </h1>
-          <label class="sr-only" for="difficulty-options">Difficulty</label>
-          <select id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </div>
-        <div class="header-actions">
-          <button id="new-game-btn" class="secondary-btn" type="button">New game</button>
         </div>
       </header>
+
+      <div class="header-actions">
+        <label class="sr-only" for="difficulty-options">Difficulty</label>
+        <select id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="new-game-btn" class="secondary-btn" type="button">New game</button>
+      </div>
 
       <div class="game-layout">
         <main class="game-panel">
           <section class="prompt-card">
           <div class="prompt-header">
             <p id="prompt-label" class="prompt-label"></p>
-            <span id="difficulty-badge" class="difficulty-badge">Guess 1 of 6</span>
+            <div class="guess-progress" aria-label="Guesses">
+              <span class="guess-progress-label">Guesses</span>
+              <div id="guess-dots" class="guess-dots" aria-label="6 guesses remaining"></div>
+            </div>
           </div>
           <h2 id="prompt-text"></h2>
           </section>
@@ -88,15 +92,9 @@
         </section>
         </main>
 
-        <aside class="guess-sidebar">
-          <div class="guess-count">
-            <span class="label">Guesses left</span>
-            <strong id="lives-left">6</strong>
-          </div>
-        </aside>
       </div>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>
