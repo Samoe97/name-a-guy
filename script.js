@@ -26,10 +26,16 @@ const resultEl = document.getElementById("result");
 const hintListEl = document.getElementById("hint-list");
 const previousGuessesEl = document.getElementById("previous-guesses");
 const difficultyOptionsEl = document.getElementById("difficulty-options");
+const modeOptionsEl = document.getElementById("mode-options");
 
 const maxGuesses = 6;
 const hint1Guess = 2;
 const hint2Guess = 4;
+
+const modeConfig = {
+  guy: { file: "guys.json", label: "guy", title: "Guy", theme: null },
+  gal: { file: "gals.json", label: "gal", title: "Gal", theme: "theme-gal" }
+};
 
 let guys = [];
 let currentGuy = null;
@@ -40,6 +46,7 @@ let revealedTags = [];
 let previousGuesses = [];
 let usedGuyNames = new Set();
 let difficulty = "easy";
+let mode = "guy";
 
 function getTags(guy) {
   return [...new Set(guy.categories || [])].filter(Boolean);
@@ -310,15 +317,17 @@ document.addEventListener("click", (event) => {
   if (!answerInputEl.contains(event.target) && !suggestionListEl.contains(event.target)) hideSuggestions();
 });
 
-const dataUrls = [...new Set([
-  new URL("guys.json", document.baseURI).href,
-  new URL("../guys.json", document.baseURI).href,
-  new URL("/name-a-guy/guys.json", window.location.origin).href
-])];
+function getDataUrls(fileName) {
+  return [...new Set([
+    new URL(fileName, document.baseURI).href,
+    new URL(`../${fileName}`, document.baseURI).href,
+    new URL(`/name-a-guy/${fileName}`, window.location.origin).href
+  ])];
+}
 
 function fetchGuysData(urls) {
   const [url, ...remainingUrls] = urls;
-  if (!url) return Promise.reject(new Error("Could not find guys.json in any deployment path"));
+  if (!url) return Promise.reject(new Error("Could not find data file in any deployment path"));
 
   return fetch(url, { cache: "no-store" }).then((response) => {
     if (!response.ok) {
@@ -331,14 +340,37 @@ function fetchGuysData(urls) {
   });
 }
 
-fetchGuysData(dataUrls)
-  .then((data) => {
-    if (!Array.isArray(data)) throw new Error("guys.json must contain an array");
-    guys = [...new Map(data.map((guy) => [normalizeAnswer(guy.name), guy])).values()];
-    if (!guys.length) throw new Error("guys.json contains no people");
+function applyModeUi() {
+  const config = modeConfig[mode];
+  document.body.classList.toggle("theme-gal", config.theme === "theme-gal");
+  answerInputEl.placeholder = `Type the ${config.label}'s name...`;
+  document.title = `Name a ${config.title}`;
+}
+
+function loadModeData(nextMode) {
+  const config = modeConfig[nextMode];
+  return fetchGuysData(getDataUrls(config.file)).then((data) => {
+    if (!Array.isArray(data)) throw new Error(`${config.file} must contain an array`);
+    const people = [...new Map(data.map((guy) => [normalizeAnswer(guy.name), guy])).values()];
+    if (!people.length) throw new Error(`${config.file} contains no people`);
+    mode = nextMode;
+    guys = people;
+    usedGuyNames = new Set();
+    applyModeUi();
     chooseGuy();
-  })
-  .catch((error) => {
-    console.error("NameAGuy data load failed:", error);
-    setFeedback("The guy list could not be loaded.", "error");
   });
+}
+
+modeOptionsEl.addEventListener("change", (event) => {
+  const nextMode = event.target.value;
+  loadModeData(nextMode).catch((error) => {
+    console.error("NameAGuy mode switch failed:", error);
+    setFeedback(`The ${modeConfig[nextMode].label} list could not be loaded.`, "error");
+    modeOptionsEl.value = mode;
+  });
+});
+
+loadModeData(mode).catch((error) => {
+  console.error("NameAGuy data load failed:", error);
+  setFeedback("The guy list could not be loaded.", "error");
+});

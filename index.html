@@ -7,13 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="stylesheet" href="style.css?v=4" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
         <div class="brand-wrap">
-          <h1>Name a Guy</h1>
+          <h1>Name a
+            <label class="sr-only" for="mode-options">Game mode</label>
+            <select id="mode-options" class="mode-select" aria-label="Game mode">
+              <option value="guy">Guy</option>
+              <option value="gal">Gal</option>
+            </select>
+          </h1>
           <label class="sr-only" for="difficulty-options">Difficulty</label>
           <select id="difficulty-options" class="difficulty-options" aria-label="Difficulty">
             <option value="easy">Easy</option>
@@ -91,6 +97,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
