@@ -12,7 +12,6 @@ const promptTextEl = document.getElementById("prompt-text");
 const promptLabelEl = document.getElementById("prompt-label");
 const promptCardEl = document.querySelector(".prompt-card");
 const answerInputEl = document.getElementById("answer-input");
-const feedbackEl = document.getElementById("feedback");
 const answerForm = document.getElementById("answer-form");
 const newGameBtn = document.getElementById("new-game-btn");
 const skipBtn = document.getElementById("skip-btn");
@@ -71,8 +70,6 @@ function hideSuggestions() {
 }
 
 function setFeedback(message, state = "info") {
-  feedbackEl.textContent = message;
-  feedbackEl.className = `feedback ${state}`;
 }
 
 function renderSharedTags() {
@@ -123,7 +120,7 @@ function renderProgressiveHints() {
   }
 
   if (guesses >= 3 && currentGuy.ethnicity) {
-    hints.push(`Ethnicity: ${currentGuy.ethnicity}`);
+    hints.push(currentGuy.ethnicity);
   }
 
   if (guesses >= 4) {
@@ -135,7 +132,7 @@ function renderProgressiveHints() {
       additionalCategoryStart,
       additionalCategoryStart + additionalCategoryCount
     );
-    additionalCategories.forEach((category) => hints.push(`Category clue: ${category}`));
+    additionalCategories.forEach((category) => hints.push(category));
   }
 
   hintListEl.innerHTML = hints.map((hint) => `<li>${hint}</li>`).join("");
@@ -143,7 +140,7 @@ function renderProgressiveHints() {
 
 function finishRound(message, state) {
   isRoundOver = true;
-  promptLabelEl.textContent = "Answer";
+  promptLabelEl.textContent = "CORRECT ANSWER";
   promptTextEl.textContent = currentGuy.name;
   promptCardEl.className = `prompt-card ${state === "success" ? "answer-success" : "answer-failure"}`;
   if (state === "success") {
@@ -193,7 +190,7 @@ function chooseGuy() {
   hint2El.textContent = "";
   hint2El.parentElement.classList.remove("visible");
   hideSuggestions();
-  setFeedback("Make your guess.");
+  setFeedback("");
   answerInputEl.focus();
 }
 

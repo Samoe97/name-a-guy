@@ -257,12 +257,17 @@ h1 {
 }
 
 .clues-panel .shared-tags-block .tag-list {
-  gap: 5px;
+  gap: 4px;
 }
 
 .clues-panel .shared-tags-block .tag {
-  padding: 0.3rem 0.55rem;
+  padding: 0.24rem 0.45rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.3);
+  border-radius: 2px;
+  background: rgba(var(--primary-rgb), 0.12);
+  color: var(--primary-2);
   font-size: 0.72rem;
+  font-weight: 700;
 }
 
 .clues-panel > .result-label {
@@ -272,7 +277,7 @@ h1 {
 .clues-panel .hint-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;
   padding-left: 0;
   font-size: 0.78rem;
   line-height: 1.35;
@@ -280,9 +285,9 @@ h1 {
 }
 
 .clues-panel .hint-list li {
-  padding: 0.3rem 0.55rem;
+  padding: 0.24rem 0.45rem;
   border: 1px solid rgba(var(--primary-rgb), 0.3);
-  border-radius: 999px;
+  border-radius: 2px;
   background: rgba(var(--primary-rgb), 0.12);
   color: var(--primary-2);
   font-size: 0.72rem;
@@ -344,6 +349,38 @@ h1 {
 .prompt-label:empty,
 #prompt-text:empty {
   display: none;
+}
+
+.prompt-card.answer-success .guess-progress,
+.prompt-card.answer-failure .guess-progress {
+  display: none;
+}
+
+.prompt-card.answer-success .prompt-header,
+.prompt-card.answer-failure .prompt-header {
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.prompt-card.answer-success .prompt-label,
+.prompt-card.answer-failure .prompt-label {
+  display: block;
+  color: var(--primary-2);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
+.prompt-card.answer-success,
+.prompt-card.answer-failure {
+  padding: 12px;
+}
+
+.prompt-card.answer-success #prompt-text,
+.prompt-card.answer-failure #prompt-text {
+  width: 100%;
+  text-align: center;
 }
 
 .guess-progress {
@@ -520,28 +557,6 @@ h1 {
 .suggestion-item:focus {
   background: rgba(var(--primary-rgb), 0.08);
   outline: none;
-}
-
-.feedback {
-  margin: 18px 0 0;
-  min-height: 1.5em;
-  font-weight: 600;
-}
-
-.feedback.info {
-  color: var(--muted);
-}
-
-.feedback.success {
-  color: var(--success);
-}
-
-.feedback.error {
-  color: var(--danger);
-}
-
-.feedback.reveal {
-  color: var(--warning);
 }
 
 .result {
@@ -848,8 +863,8 @@ h1 {
   }
 
   .clues-panel .shared-tags-block .tag {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.64rem;
+    padding: 0.22rem 0.4rem;
+    font-size: 0.65rem;
   }
 
   .answer-form {
@@ -894,11 +909,6 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-
-  .feedback {
-    margin-top: 8px;
-    font-size: 0.82rem;
   }
 
   .button-row {
