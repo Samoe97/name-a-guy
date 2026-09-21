@@ -366,16 +366,38 @@ function loadModeData(nextMode) {
   });
 }
 
+function getModeFromHash() {
+  const hashMode = window.location.hash.replace("#", "").toLowerCase();
+  return modeConfig[hashMode] ? hashMode : "guy";
+}
+
 modeOptionsEl.addEventListener("change", (event) => {
   const nextMode = event.target.value;
-  loadModeData(nextMode).catch((error) => {
+  loadModeData(nextMode).then(() => {
+    window.location.hash = nextMode;
+  }).catch((error) => {
     console.error("NameAGuy mode switch failed:", error);
     setFeedback(`The ${modeConfig[nextMode].label} list could not be loaded.`, "error");
     modeOptionsEl.value = mode;
   });
 });
 
-loadModeData(mode).catch((error) => {
+window.addEventListener("hashchange", () => {
+  const nextMode = getModeFromHash();
+  if (nextMode === mode) return;
+  loadModeData(nextMode).then(() => {
+    modeOptionsEl.value = nextMode;
+  }).catch((error) => {
+    console.error("NameAGuy mode switch failed:", error);
+    setFeedback(`The ${modeConfig[nextMode].label} list could not be loaded.`, "error");
+  });
+});
+
+mode = getModeFromHash();
+modeOptionsEl.value = mode;
+loadModeData(mode).then(() => {
+  window.location.hash = mode;
+}).catch((error) => {
   console.error("NameAGuy data load failed:", error);
   setFeedback("The guy list could not be loaded.", "error");
 });
