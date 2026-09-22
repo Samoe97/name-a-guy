@@ -26689,5 +26689,44 @@
     "hint2": "The director behind Halloween, The Thing, Escape from New York, and They Live, who frequently composed the music for his own films.",
     "notorietyScore": 650,
     "ethnicity": "White / American"
+  },
+  {
+    "name": "DaBaby",
+    "birthYear": 1991,
+    "age": 34,
+    "isDeceased": false,
+    "categories": [
+      "Rapper",
+      "Musician",
+      "Hip-Hop",
+      "American",
+      "North Carolina",
+      "Platinum Records",
+      "Born in 90s"
+    ],
+    "hint1": "A charismatic American rapper known for an energetic delivery, colorful music videos, and a rapid rise from mixtapes to mainstream success.",
+    "hint2": "A North Carolina hip-hop artist whose breakout album Baby on Baby included the hit single 'Suge' and earned multiple Grammy nominations.",
+    "notorietyScore": 600,
+    "ethnicity": "Black / African American"
+  },
+  {
+    "name": "Chris Bosh",
+    "birthYear": 1984,
+    "age": 42,
+    "isDeceased": false,
+    "categories": [
+      "Athlete",
+      "Basketball Player",
+      "NBA",
+      "NBA Champion",
+      "Olympic Gold Medalist",
+      "Toronto Raptors",
+      "Miami Heat",
+      "Born in 80s"
+    ],
+    "hint1": "A versatile former professional athlete known for combining unusual height with perimeter skills and anchoring a celebrated championship team.",
+    "hint2": "A power forward who became the Toronto Raptors' all-time leading scorer before winning two NBA titles with Miami's Big Three and two Olympic gold medals.",
+    "notorietyScore": 720,
+    "ethnicity": "Black / African American"
   }
 ]
